@@ -6,19 +6,34 @@ import './App.css'
 
 function App() {
   
-  let [counter , setCounter] = useState(1);
+  let [counter , setCounter] = useState(0);
 
+  // adding value upto 20
 
+  // const addValue = () => {
+  //   if (counter < 20) {
+  //     setCounter(counter + 1);
+  //   }
+  // }
+
+  // it will add value by 1 and 1 means 2 at one time
+  
   const addValue = () => {
-    if (counter < 5) {
-      setCounter(counter + 1);
-    }
+    setCounter((prevCounter) => (prevCounter + 1));
+    setCounter((prevCounter) => (prevCounter + 1));
   }
 
+  // decrease upto 0
+
+  // const remValue = () => {
+  //   if (counter > 0) {
+  //     setCounter(counter - 1);
+  //   }
+  // }
+
   const remValue = () => {
-    if (counter > 0) {
-      setCounter(counter - 1);
-    }
+    setCounter(counter - 1);
+    setCounter(counter - 1);
   }
 
   return (
